@@ -1,39 +1,31 @@
-# Reflection.md
 
-## Documentation
-
-### Main Concepts Applied
-
-For this practical, I worked on updating and improving the UI of a React/Next.js layout using TailwindCSS. Specifically, I:
-- Applied component-based development by structuring reusable UI parts with `Link` and `button` components.
-- Used **Next.js `Link`** for client-side navigation to enhance page transitions.
-- Implemented **TailwindCSS utility classes** to style buttons consistently, such as `bg-red-500`, `hover:bg-red-600`, and `rounded-md`.
-- Focused on **consistent hover states and styling**, ensuring a smooth and unified user experience.
-- Practiced **fixed sidebar layout** and **responsive header design** within a flexbox structure.
-
-## Reflection
-
-### What I Learned
-
-- I improved my skills in **handling nested JSX structures** inside a Next.js project.
-- I learned how **important consistent styling is across different parts of an app** (e.g., sidebar vs. header buttons).
-- I gained more practice in using **TailwindCSS for rapid UI development** without writing custom CSS.
-- I understood better how **fixed positioning combined with flex layouts** can control page structure cleanly.
-
-### Challenges Faced and How I Overcame Them
-
-**1. Button Wrapping with Link**
-- **Challenge:** Initially, I had just a `<button>` without wrapping it in `<Link>`, causing navigation not to work as expected.
-- **Solution:** I wrapped the button inside a `<Link>` component and made sure all navigation-related buttons use `Link` instead of just `<button>`.
-
-**2. TailwindCSS Class Organization**
-- **Challenge:** When copying classes from the provided image, it was tricky to spot missing classes or typos because of spacing.
-- **Solution:** I carefully typed out the classes manually and cross-verified with the image to ensure no missing or incorrect classes.
-
-**3. Sidebar Layout Breaking on Fix**
-- **Challenge:** After adjusting the sidebar login section, the spacing between sections initially broke.
-- **Solution:** I debugged by inspecting using DevTools and realized I needed extra `px-3 py-4` padding to match the design properly.
 ---
 
-Overall, this practical helped me gain confidence in **small UI updates, proper layout structuring, and attention to detail** when working with Next.js and TailwindCSS.
+## `Reflection.md`
 
+```md
+# Reflection - Practical 1: TikTok Clone Using Next.js
+
+## a) Documentation
+
+In this practical, I worked on building a TikTok-style web app using **Next.js**, **Tailwind CSS**, and **React Hook Form**. I learned how to:
+
+- Set up a clean Next.js app with Tailwind and App Router.
+- Structure a project using components and folders (`layout`, `ui`, `app/profile`, etc.).
+- Build a sidebar layout similar to TikTok's web UI.
+- Create dynamic page components (`Home`, `Explore`, `Live`, `Profile`, `Upload`).
+- Implement form validation using `react-hook-form`.
+
+We also focused on managing layouts globally through `MainLayout.jsx`, and I learned how to reuse components like `VideoCard` and `VideoFeed` for scalability.
+
+## b) Reflection
+
+I learned how to use the **new App Router** structure in Next.js, which was quite different from the traditional pages/ directory. The use of `layout.js` and routing between multiple pages helped me better understand how large-scale React applications are structured.
+
+**Challenges I faced:**
+- One challenge was integrating `react-hook-form` correctly. Initially, I forgot to register the inputs which caused form values not to appear.
+- Another issue was styling the layout responsively with Tailwind; my sidebar wasn't sticking properly on smaller screens. I referred to Tailwind docs and used Flexbox properly to fix it.
+
+To overcome validation issues, I tested each form case: empty fields, wrong email formats, and mismatched passwords. This helped me understand how detailed form handling works in real-world apps.
+
+Overall, this practical gave me a strong foundation in combining **frontend structure** with **form validation** — two critical aspects of real web development.
